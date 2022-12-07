@@ -1,0 +1,44 @@
+create database DB_VINOS;
+GO
+
+USE DB_VINOS;
+GO
+
+CREATE TABLE PRODUCTO (
+    IDPRO int  NOT NULL IDENTITY(1, 1),
+    NOMPRO varchar(60)  NOT NULL,
+    PREPRO decimal(8,2)  NOT NULL,
+    TAMPRO varchar(15)  NOT NULL,
+    STOCKPRO int  NOT NULL,
+    ESTPRO char(1)  NOT NULL,
+    DETPRO varchar(400)  NOT NULL,
+	CATPRO varchar(20) NOT NULL,
+    CONSTRAINT PRODUCTO_pk PRIMARY KEY  (IDPRO)
+);
+
+
+INSERT INTO PRODUCTO
+(NOMPRO, PREPRO  , TAMPRO , STOCKPRO ,ESTPRO,DETPRO,CATPRO)
+VALUES
+('VINO ROSE',14.00,'750 ML',100,'A','vino tinto con poca maceración. Proviene de uvas negras (o mezcla de uvas negras y blancas) y la tonalidad del rosado dependerá del tiempo de maceración.','VINOS'),
+('VINO GRAN ROSE',17.00,'750 ML',100,'A','vino especial , tiene un color más tenue y blanquecino; y a mayor tiempo de maceración, color más púrpura o violáceo.','VINOS'),
+('VINO BLANCO',9.00,'550 ML',100,'A','Lo puedes acompañar con la comida, y tradicionalmente se ha asociado con el maridaje de pescados, mariscos y algunas carnes blancas.','VINOS'),
+('VINO TINTO',10.00,'550 ML',100,'A','Su color intenso y característico lo dan los hollejos de la materia prima y sus sustancias colorantes.','VINOS'),
+('VINO CORAZON DE CRISTO',11.00,'250 ML',100,'A','Vino rojiso oscuro , tiene un agradable olor a uvas frescas y uvas especiales del sur de Lima.','VINOS'),
+('VINO AÑEJO',15.00,'750 ML',100,'A','Vino almacenado en barriles de madera durante mas de 10 años','VINOS'),
+('VINO GRAN AÑEJO',20.00,'500 ML',100,'A','Vino almacenado en barriles de madera durante mas de 20 años','VINOS'),
+('PISCO SUPER ACHOLADO',45.00,'1 LT',100,'A','Es una variedad plus de pisco que ha sido elaborado con más de dos cepas de uva.','PISCO'),
+('PISCO ACHOLADO',35.00,'1 LT',100,'A','Es una variedad de pisco que ha sido elaborado con dos o más cepas de uva, lo que se conoce en el mundo de las bebidas espirituosas.','PISCO'),
+('PISCO MOSTO VERDE',50.00,'1 LT',100,'A','Esta variedad es obtenido de la destilación de mostos frescos de uvas pisqueras con fermentación interrumpida.','PISCO'),
+('PISCO ARROPE ',42.00,'1LT',100,'A','Pisco Puro que están hechos exclusivamente de una sola variedad de uva pisquera','PISCO'),
+('PISCO ITALIA',78.00,'2LT',100,'A','Destilado el 100% mosto de uva Italia, mediante un proceso lento y cuidadoso, manteniendo los olores y sabores propios de esta variedad','PISCO'),
+('PISCO QUEBRANTA',70.00,'2LT',100,'A','Es un pisco de alta calidad, fabricado con un tipo de uva altamente resistente y que es conocida como la reina del pisco','PISCO'),
+('PISCO UVINA ',50.00,'2LT',100,'A','Pisco puro artesanal de buena estructura, sabores dulces y agradables, aromas herbáceos intensos, frutados y especiados.','PISCO'),
+('PISCO MOSCATEL',45.00,'1LT',100,'A','Pisco de aromas elegantes y sofisticados: vainilla, especies, castaña, jazmín y chocolate','PISCO'),
+('PISCO PURO',25.00,'1LT',100,'A','Pisco obtenido exclusivamente de una sola variedad de uva pisquera.','PISCO'),
+('PISCO MOLLAR',42.00,'1LT',100,'A','Se caracteriza por ser de cáscara delgada y jugo dulce, equilibrado con aromas dulces a pasas negras, melón y sandía.','PISCO'),
+('VINO CAS', 10.00,'750 ML', 50,'A', 'Vino elaborado con la receta secreta de la abuelita "COCO" .','VINO'),
+('PISCO ALBILLA',77.00,'2LT',100,'A','Pisco Demonio de los Andes Albilla es elaborado con la más fina y exclusiva selección de uvas Albilla','PISCO'),
+('PISCO MACERADO',85.00,'2LT',100,'A','Preparado con una receta sencilla donde se trata de mezclar sabores entre frutos y hierbas.','PISCO');
+
+select * from producto;
